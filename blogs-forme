@@ -188,4 +188,16 @@ tags: ["Tag1", "Tag2", "Tag3"]
 
 ## Final Output
 
-Present the complete MDX file content to the user, ready to save as a `.mdx` file. Include a suggested filename based on the title (e.g., `your-post-title-here.mdx`).#
+Once the user approves the final MDX content:
+
+1.  **Save the post** to `~/git/helloto/posts/` with a filename based on the title (e.g., `your-post-title-here.mdx`).
+2.  **Update the repository** before committing:
+    ```bash
+    cd ~/git/helloto && git pull
+    ```
+3.  **Commit and push** the new post:
+    ```bash
+    cd ~/git/helloto && git add posts/<filename>.mdx && git commit -m "Add post: <title>" && git push
+    ```
+
+Present the complete MDX file content to the user for review before saving. Confirm the filename and proceed with the save/pull/push workflow.
